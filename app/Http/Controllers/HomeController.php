@@ -33,7 +33,7 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-
+        // hello world
         $data = $request->except('_token');
         Data::create($data);
         return back()->with('msg', 'Detail saved  Successfully');
@@ -48,7 +48,7 @@ class HomeController extends Controller
 
     public function delete($id)
     {
-       Data::find($id)->delete();
-       return back()->with('msg', 'Detail Deleted  Successfully');
+        Data::find($id)->delete();
+        return back()->with('msg', 'Detail Deleted  Successfully');
     }
 }
